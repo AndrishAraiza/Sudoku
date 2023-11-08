@@ -1,31 +1,30 @@
 package models;
-import enums.Contenido;
 
 /**
  *
  * @author Pablo
  */
 public class Casilla {
-    private Contenido contenido;
+    private int contenido;
     
     public Casilla() {
-        contenido = Contenido.VACIA;
+        contenido = 0;
     }
     
-    public void setContenido(Contenido nContenido){
+    public void setContenido(int nContenido){
         this.contenido = nContenido;
     }
     
-    public Contenido getContenido() {
+    public int getContenido() {
         return this.contenido;
     }
     
     public boolean esEditable() {
-        return contenido == Contenido.VACIA;
+        return contenido == 0;
     }
     
     @Override
     public String toString() {
-        return String.valueOf(this.contenido.getValorNumerico());
+        return String.valueOf(contenido);
     }
 }

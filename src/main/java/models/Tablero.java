@@ -1,6 +1,5 @@
 package models;
 
-import enums.Contenido;
 
 /**
  *
@@ -27,7 +26,7 @@ public class Tablero {
         }
     }
 
-    public void setCasilla(int fila, int columna, Contenido valor) {
+    public void setCasilla(int fila, int columna, int valor) {
 
     }
 
