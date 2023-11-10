@@ -1,9 +1,5 @@
 package models;
 
-/**
- *
- * @author Pablo
- */
 public class Casilla {
     private int contenido;
     

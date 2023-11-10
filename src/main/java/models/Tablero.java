@@ -1,10 +1,5 @@
 package models;
 
-
-/**
- *
- * @author Pablo
- */
 public class Tablero {
 
     private Casilla[][] casillas;
@@ -15,6 +10,7 @@ public class Tablero {
     }
 
     public void inicializar() {
+        
         // Creamos un arreglo de casillas
         casillas = new Casilla[numFilas][numColumnas];
 
@@ -35,32 +31,35 @@ public class Tablero {
     }
 
     public Casilla[] getFilas(int fila) {
+        
         // Creamos un arreglo para representar las filas del tablero
         Casilla[] filas = new Casilla[numColumnas];
 
         for (int i = 0; i < numColumnas; i++) {
             // Almacenamos cada elemento de la fila
-            filas[i] = casillas[fila - 1][i];
+            filas[i] = casillas[fila][i];
         }
         return filas;
     }
 
     public Casilla[] getColumnas(int columna) {
+        
         // Creamos un arreglo para representar las columnas del tablero
         Casilla[] columnas = new Casilla[numFilas];
 
         for (int i = 0; i < numFilas; i++) {
             // Almacenamos cada elemento de la columna
-            columnas[i] = casillas[i][columna - 1];
+            columnas[i] = casillas[i][columna];
         }
         return columnas;
     }
 
     public Casilla[][] getBloque(int fila, int columna) {
+        
         // Calculamos la fila en la que se encuentra el bloque
-        int filaBloque = (fila - 1)/3;
+        int filaBloque = (fila)/3;
         // Calculamos la columna en la que se encuentra el bloque
-        int columnaBloque = (columna - 1)/3;
+        int columnaBloque = (columna)/3;
         
         // Creamos un arreglo para representar un bloque 3x3 dentro del tablero
         Casilla[][] bloque = new Casilla[3][3];
